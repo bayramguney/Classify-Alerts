@@ -1,61 +1,47 @@
 # Classify-Alerts
-# Recommend a Cloud Security Solution
+# Lab - Classify Alerts
 
 ## Overview
-This lab evaluates cloud computing security by selecting an appropriate cloud deployment model and service model for an eCommerce startup. It also explores the shared responsibility model, common cloud security threats, and recommended security controls to protect cloud-hosted applications and customer data.
+
+This lab focused on researching Snort IDS alerts and CVE vulnerabilities, then classifying alerts in both Windows and Linux enterprise environments. The objective was to determine whether alerts represented true positives, false positives, or required additional investigation based on the operating systems and devices present in each environment.
 
 ## Objectives
-- Recommend a cloud deployment and service model
-- Understand the shared responsibility model
-- Identify cloud security threats
-- Recommend security measures for cloud-based eCommerce
-- Evaluate the benefits and security considerations of cloud computing
 
-## Recommended Solution
-- **Cloud Deployment Model:** Public Cloud
-- **Cloud Service Model:** Platform as a Service (PaaS)
-
-**Why PaaS?**
-PaaS provides a managed platform for developing and hosting eCommerce applications without managing servers or operating systems. It offers scalability, automatic updates, high availability, and built-in security, allowing the company to focus on application development and customer service.
-
-## Shared Responsibility (PaaS)
-
-| Component | Responsibility |
-|-----------|----------------|
-| Data | Client |
-| Endpoints | Client |
-| Identity Management | Shared |
-| Application | Client |
-| Network Control | Cloud Provider |
-| Operating System | Cloud Provider |
-| Physical Infrastructure | Cloud Provider |
-
-## Cloud Security Threats
-- Data breaches
-- Account hijacking
-- Cloud misconfiguration
-- Distributed Denial-of-Service (DDoS) attacks
-- Malware and ransomware
-
-## Recommended Security Controls
-- Enable Multi-Factor Authentication (MFA)
-- Encrypt data at rest and in transit
-- Apply Identity and Access Management (IAM) using least privilege
-- Use Web Application Firewalls (WAF) and DDoS protection
-- Perform continuous monitoring, vulnerability scanning, patch management, and regular backups
-
-## Key Takeaways
-This lab demonstrates that **Platform as a Service (PaaS)** is an excellent choice for a growing eCommerce business because it provides scalability, reliability, and reduced infrastructure management. Cloud security is based on a **shared responsibility model**, requiring both the cloud provider and customer to secure their respective environments. Strong authentication, encryption, access control, monitoring, and regular maintenance are essential for protecting cloud applications and customer information.
+- Research Snort SID and CVE identifiers.
+- Identify associated vulnerabilities and CVSS severity scores.
+- Understand malware signatures and vulnerability-based alerts.
+- Classify alerts as True Positive, False Positive, or Needs Further Investigation.
+- Compare alert relevance across Windows and Linux environments.
 
 ## Skills Demonstrated
-- Cloud Computing
-- Public Cloud
-- Platform as a Service (PaaS)
-- Cloud Security
-- Shared Responsibility Model
-- Identity and Access Management (IAM)
-- Multi-Factor Authentication (MFA)
-- Encryption
-- Risk Assessment
-- Security Best Practices
-- eCommerce Security
+
+- Snort IDS alert analysis
+- CVE research using MITRE, NVD, and Cisco Talos
+- CVSS severity interpretation
+- Security event classification
+- Threat analysis
+- Windows security assessment
+- Linux security assessment
+- SIEM alert validation
+- Vulnerability assessment
+
+## Technologies Used
+
+- Snort IDS
+- MITRE CVE Database
+- National Vulnerability Database (NVD)
+- Cisco Talos
+- VirusTotal
+- CVSS v3.x
+
+## Key Findings
+
+- Windows-specific vulnerabilities generated true positives only in Windows environments.
+- Linux kernel and APT vulnerabilities were relevant only in Linux environments.
+- Malware alerts required evaluating whether the targeted operating system existed in the environment.
+- Some alerts affecting Apple devices required additional investigation because unmanaged devices could still appear on enterprise networks.
+- Accurate alert classification helps reduce false positives while improving incident response efficiency.
+
+## Outcome
+
+This lab strengthened practical SOC analyst skills by combining vulnerability research with security event analysis. It reinforced how analysts validate IDS alerts, interpret CVE information, and determine whether security events require investigation based on the organization's infrastructure.
